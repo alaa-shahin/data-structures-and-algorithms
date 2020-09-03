@@ -1,3 +1,4 @@
+
 void main() {
 
   int E = 5;
@@ -66,6 +67,7 @@ class Graph{
     for(i = 0; i < V; i++){
       result[i] = Edge();
     }
+    edge.sort();
     List<Subset>subset = List<Subset>(V);
      for(i = 0; i < V; i++){
        subset[i]= Subset();
@@ -91,7 +93,7 @@ class Graph{
   }
 }
 
-class Edge {
+class Edge implements Comparable<Edge>  {
   int src, dest, cost; 
   int compareTo(Edge compareEdge){
     return cost - compareEdge.cost; 
