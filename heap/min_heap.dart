@@ -32,9 +32,9 @@ void main() {
        heapify(list, n, i);
     }
     for(int i = n - 1; i >= 0; i--) {      
-        int temp = list[0];
-        list[0] = list[i];
-        list[i] = temp;
-        heapify(list, i, 0);
+      int temp = list[0];
+      list[0] = list[i];
+      list[i] = temp;
+      heapify(list, i, 0);
     }
 }

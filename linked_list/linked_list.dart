@@ -9,27 +9,26 @@ void main() {
 
 class Linkedlist {
   List data= [];
-  int currntnode;
+  int currntNode;
   
-  void add (int x){
-    if (data.length ==0){
-       List l = [null, x, null];
-       data.add(l);
-      currntnode= 0;
-    }else{
-      List m = [data[currntnode][1], x, null];
-       data.add(m);
-       data[currntnode][2] = x;
-       currntnode++;
+  void add(int x) {
+    if(data.length ==0) {
+      List l = [null, x, null];
+      data.add(l);
+      currntNode= 0;
+    } else {
+      List m = [data[currntNode][1], x, null];
+      data.add(m);
+      data[currntNode][2] = x;
+      currntNode++;
     }
   }
   
-  void remove(int x)
-  {
-    if (data.length ==0) {
+  void remove(int x) {
+    if(data.length ==0) {
       print("is empty");
     } else {
-      if (data.length > x-1) {
+      if(data.length > x-1) {
         data.removeAt(x-1);
         if(data.length >= x) {
           data[x-2][2] = data[x-1][1];
@@ -42,7 +41,7 @@ class Linkedlist {
     }
    } 
   
- void show(){
-   print(data);
+ void show() {
+    print(data);
  }
 }

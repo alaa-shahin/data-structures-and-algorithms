@@ -10,35 +10,34 @@ void main() {
 }
 
 class Stack {
-   int size;
-   List data = [];
+  int size;
+  List data = [];
 
-  Stack(int s){
-    if(s <= 0 || s == null){
+  Stack(int s) {
+    if(s <= 0 || s == null) {
       print('Error');
     } else {
       size = s;
     }  
   }
 
-
-  void push (int x){
-    if (data.length < size){
+  void push(int x) {
+    if (data.length < size) {
       data.add(x);
     } else {
       print('Stack is full');
     }
   }
 
-  void pop(){
-    if(data.length == 0){
+  void pop() {
+    if(0 == data.length) {
       print('Stack is empty');
-    } else{
+    } else {
       data.removeAt(data.length-1);
     }
   }
-  void show(){
+
+  void show() {
     print(data);  
   }
 }
- 
